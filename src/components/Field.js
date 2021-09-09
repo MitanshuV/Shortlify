@@ -32,10 +32,9 @@ function Field() {
   const handleSubmit = (e) => {
     getLinkData();
     setInput("");
-    setUploading(true);
     setTimeout(() => {
       setUploading(false);
-    }, 20000);
+    }, 25000);
   };
   const handleForm = (e) => {
     e.preventDefault();
