@@ -57,8 +57,8 @@ const WrapperButton = styled.button`
 
 const WrapperModal = styled.div`
   background: #1ef16e;
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  height: 100%;
   position: fixed;
   top: 50%;
   left: 50%;
