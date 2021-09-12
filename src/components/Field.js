@@ -21,9 +21,11 @@ function Field() {
   };
   const getLinkData = async () => {
     try {
+      setUploading(true);
       const data = await fetch(link);
       const response = await data.json();
       setShortLink(response.result.full_short_link);
+      setUploading(false);
     } catch (error) {
       alert("You haven't entered any link ");
       setUploading(false);
@@ -32,9 +34,6 @@ function Field() {
   const handleSubmit = (e) => {
     getLinkData();
     setInput("");
-    setTimeout(() => {
-      setUploading(false);
-    }, 25000);
   };
   const handleForm = (e) => {
     e.preventDefault();
